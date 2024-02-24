@@ -5,22 +5,13 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Enemy _enemyPrefab;
     [SerializeField] private float _spawnDelay = 2f;
 
-    private float _timeUntilSpawn= 0f;
-
-    private void Update()
+    private void Start()
     {
-        if (_timeUntilSpawn <= 0)
-        {
-            Spawn();
-            _timeUntilSpawn = _spawnDelay;
-        }
-
-        _timeUntilSpawn -= Time.deltaTime;
+        InvokeRepeating(nameof(Spawn), 0, _spawnDelay);
     }
-
+   
     private void Spawn()
     {
-        Debug.Log(gameObject.name + " " + transform.rotation);
         Instantiate(_enemyPrefab, transform.position, transform.rotation);
     }
 }
