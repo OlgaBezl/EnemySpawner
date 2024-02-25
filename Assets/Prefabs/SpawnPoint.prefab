@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6839474226536171312}
   - component: {fileID: 5048085615740859065}
-  - component: {fileID: 3888847588081364904}
+  - component: {fileID: 2374933702493884754}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4088266354764541881}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &3888847588081364904
+--- !u!114 &2374933702493884754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -52,12 +52,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4088266354764541881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8b334b9bee553a4ea27d248fa9ddaa3, type: 3}
+  m_Script: {fileID: 11500000, guid: c26f7362c6f6ce54b8a3845a21e8c708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 5886645565981986884, guid: 23b78a8b126c928499b73aa6a9717c31, type: 3}
+  _enemyPrefab: {fileID: 0}
   _target: {fileID: 0}
-  _spawnDelay: 3
 --- !u!1 &6005041125081091958
 GameObject:
   m_ObjectHideFlags: 0

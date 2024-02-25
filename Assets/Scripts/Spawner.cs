@@ -1,9 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private Enemy _enemyPrefab;
-    [SerializeField] private Target _target;
+    [SerializeField] private List<SpawnPoint> _spawnPoints;
     [SerializeField] private float _spawnDelay = 2f;
 
     private void Start()
@@ -13,6 +14,9 @@ public class Spawner : MonoBehaviour
    
     private void Spawn()
     {
-        Instantiate(_enemyPrefab, transform.position, Quaternion.identity).SetTarget(_target);
+        foreach (SpawnPoint spawnPoint in _spawnPoints)
+        {
+            spawnPoint.Spawn();
+        }
     }
 }
