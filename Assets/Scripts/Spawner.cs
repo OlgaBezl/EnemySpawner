@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class Spawner : MonoBehaviour
 {
@@ -16,7 +15,7 @@ public class Spawner : MonoBehaviour
     {
         foreach (SpawnPoint spawnPoint in _spawnPoints)
         {
-            spawnPoint.Spawn();
+            Instantiate(spawnPoint.EnemyPrefab, spawnPoint.transform.position, Quaternion.identity).SetTarget(spawnPoint.Target);
         }
     }
 }
