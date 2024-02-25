@@ -7,12 +7,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(Destroy), _lifeTime, 0);
-    }
-
-    private void Destroy()
-    {
-        Destroy(gameObject);
+        Destroy(gameObject, _lifeTime);
     }
 
     public void SetTarget(Target target)
