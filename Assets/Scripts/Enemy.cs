@@ -2,10 +2,21 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float _speed = 5;
+    [SerializeField] private Mover _mover;
+    [SerializeField] private float _lifeTime = 20;
 
-    private void Update()
+    private void Start()
     {
-        transform.Translate(transform.forward * _speed * Time.deltaTime, Space.World);
+        InvokeRepeating(nameof(Destroy), _lifeTime, 0);
+    }
+
+    private void Destroy()
+    {
+        Destroy(gameObject);
+    }
+
+    public void SetTarget(Target target)
+    {
+        _mover.SetTarget(target.transform);
     }
 }

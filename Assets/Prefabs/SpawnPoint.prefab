@@ -56,7 +56,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 5886645565981986884, guid: 23b78a8b126c928499b73aa6a9717c31, type: 3}
-  _spawnDelay: 2
+  _target: {fileID: 0}
+  _spawnDelay: 3
 --- !u!1 &6005041125081091958
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +75,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8922118657047362506
 Transform:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private Enemy _enemyPrefab;
+    [SerializeField] private Target _target;
     [SerializeField] private float _spawnDelay = 2f;
 
     private void Start()
@@ -12,6 +13,6 @@ public class Spawner : MonoBehaviour
    
     private void Spawn()
     {
-        Instantiate(_enemyPrefab, transform.position, transform.rotation);
+        Instantiate(_enemyPrefab, transform.position, Quaternion.identity).SetTarget(_target);
     }
 }
